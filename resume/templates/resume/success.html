@@ -1,0 +1,18 @@
+{% extends "resume/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+{% if name %}
+<div class="success">
+
+    <h4>
+        Dear <b>{{name}}</b>, your message has been sent successfully. Kindly check your email for a copy of your message.
+    </h4>
+    <a href="{% url 'index' %}">Click Here to go to the Homepage</a>
+
+</div>
+{% else %}
+<h1>Page Not found</h1>
+{% endif %}
+{% endblock %}

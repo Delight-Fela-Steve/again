@@ -1,0 +1,126 @@
+/* Styling for the Logos */
+header{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    background: rgb(220, 216, 216);
+    
+}
+.logos{
+    display: flex;
+    justify-content: space-between;
+    height: 1.5rem;
+    padding: 0 2rem;
+}
+.logos img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Styling for the resume and form */
+.image{
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 10px;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.content{
+    width: 70%;
+    margin: 0 auto;
+}
+h1{
+    margin: 0;
+    text-align: center;
+}
+h3{
+    margin: 0;
+}
+.left h3{
+    color: #3dbfed;
+}
+.container-fluid{
+    background: white;
+    padding-top: 2rem;
+}
+.content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.right{
+    background: #3dbfed;
+    padding: 1rem;
+    flex: 1;
+}
+.left{
+    background:black;
+    color: white;
+    flex: 1.5;
+    padding: 1rem;
+}
+
+.center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+
+/* Media Queries */
+@media(max-width: 650px){
+    .container-fluid{
+        padding: 0;
+    }
+    .content{
+        width: 100%;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .image{
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .right{
+        text-align: center;
+        line-height: 1;
+    }
+
+    .form{
+        width:100%;
+        padding: 0 1rem;
+    }
+}
+
+
+/* Success page styling */
+
+.success{
+    margin: 0 auto;
+    text-align: center;
+}
+.success a {
+    display: inline-block;
+}

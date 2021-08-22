@@ -1,0 +1,113 @@
+{% extends "resume/layout.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Resum&eacute
+{% endblock %}
+{% block header %}
+<header>
+    <div class="logos">
+        <div class="hng"><a href="https://hng.tech" target="_blank" rel="noopener noreferrer"><img src="{% static 'resume/images/HNG-logo.png' %}" alt="HNG logo"></a></div>
+        <div class="i4g"><a href="https://ingressive.org" target="_blank" rel="noopener noreferrer"><img src="{% static 'resume/images/I4G-logo.png' %}" alt="I4G logo"></a></div>
+    </div>
+</header>
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <div class="right">
+
+        <h1>Delight Fela-Steve</h1>
+
+        <div class="center">
+            <div class="profile"></div>
+            <div class="image"><img src="{% static 'resume/images/profile.jpeg' %}" alt="image of Delight-Fela-Steve">
+            </div>
+        </div>
+        <div class="personal-details">
+            <h3>Personal Info</h3>
+            <p> Address: Ibadan, Oyo State</p>
+            <p>Nationality: Nigeria</p>
+            <p>Email address: dfelasteve@yahoo.com</p>
+            <p>Github: <a href="https://github.com/Delight-Fela-Steve">Delight-Fela-Steve</a></p>
+
+
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <p>Programming With Python</p>
+            <p>Programming with Javascript</p>
+            <p>Development of Web Apps Using Django</p>
+            <p>Development of Web Apps Using NodeJS</p>
+        </div>
+
+        <div class="languages">
+            <h3>Language</h3>
+            <p>English</p>
+        </div>
+
+        <div class="hobbies">
+            <h3>Hobbies</h3>
+            <p>Reading</p>
+            <p>Anime/Manga</p>
+            <p>Music</p>
+            <p>Games</p>
+        </div>
+    </div>
+
+
+
+    <div class="left">
+
+        <div class="about">
+            <h3>About</h3>
+            <p>I have about 1+ year's worth of experience in programming. I love creating digital solutions using web technologies, learning new things, as well as staying up to date on current technological trends.</p>
+        </div>
+
+        <div class="education">
+            <h3>Education</h3>
+            <p>> Electrical and Electronics Engineering student at Federal University of Agriculure Abeokuta </p>
+            <p>> SSCE Certificate</p>
+        </div>
+        <div class="achievements">
+            <h3>Achievements</h3>
+            <p>> Completed Harvard CS50W till Task 4</p>
+            <p>> Completed freecodecamp API and Microservices till task 2</p>
+            <p>> Completed Google Digital Skills for Africa</p>
+            <p>> Currently at Stage 2 of <a href="https://internship.zuri.team">HNG Internship</a></p>
+        </div>
+
+        <div class="projects">
+            <h3>Projects</h3>
+            <p>Here are links to some projects I've completed personally:</p>
+            <ul>
+                <li><a href="http://brainbus.atwebpages.com/">brainbus.atwebpages.com</a> </li>
+                <li> <a href="https://github.com/Delight-Fela-Steve/delight-project-timestamp.git">https://github.com/Delight-Fela-Steve/delight-project-timestamp.git</a></li>
+                <li><a href="https://github.com/Delight-Fela-Steve/delight-project-headerparser.git">https://github.com/Delight-Fela-Steve/delight-project-headerparser.git</a> </li>
+                <li><a href="https://youtu.be/TUSBikjZKB0">https://youtu.be/TUSBikjZKB0</a> </li>
+                <li><a href="https://youtu.be/8eU4oME0490">https://youtu.be/8eU4oME0490</a> </li>
+                <li><a href="https://youtu.be/37-updvqVOo">https://youtu.be/37-updvqVOo</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="form">
+    <h2>You can contact me:</h2>
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{form|crispy}}
+            <button class='btn btn-primary'>Submit</button>
+        </div>
+        
+    </form>
+</div>
+
+
+
+{% endblock %}
